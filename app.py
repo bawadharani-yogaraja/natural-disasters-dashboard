@@ -19,33 +19,21 @@ st.markdown("""
 /* ─── Global ─── */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
-    color: #1a1a2e !important;
 }
 
-/* ─── White Background ─── */
-.stApp {
-    background: #f5f6fa;
-    min-height: 100vh;
-}
-
-/* ─── Force sidebar always visible / never collapse ─── */
+/* ─── Sidebar always visible ─── */
 [data-testid="stSidebar"] {
     transform: none !important;
     visibility: visible !important;
     display: block !important;
     min-width: 260px !important;
     max-width: 300px !important;
-    background: #ffffff;
-    border-right: 2px solid #e0e4ef;
+    border-right: 2px solid rgba(128,128,128,0.2);
     box-shadow: 2px 0 8px rgba(0,0,0,0.06);
 }
-/* Hide the collapse arrow button */
 [data-testid="collapsedControl"],
 button[kind="header"] {
     display: none !important;
-}
-[data-testid="stSidebar"] * {
-    color: #1a1a2e !important;
 }
 [data-testid="stSidebar"] .stSelectbox label,
 [data-testid="stSidebar"] .stMultiSelect label,
@@ -53,50 +41,12 @@ button[kind="header"] {
     font-size: 0.78rem !important;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: #4a5568 !important;
     font-weight: 600;
-}
-
-/* ─── Main content text ─── */
-.stMarkdown, .stText, p, li, label {
-    color: #1a1a2e !important;
-}
-h1, h2, h3, h4 {
-    color: #0d0d1a !important;
-    font-family: 'Merriweather', serif !important;
-}
-
-/* ─── Student Card ─── */
-.student-card {
-    background: linear-gradient(135deg, #eef2ff, #e8f4fd);
-    border: 1px solid #c7d2fe;
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin: 12px 0 20px 0;
-    text-align: center;
-}
-.student-card .name {
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1e3a5f !important;
-    margin-bottom: 2px;
-}
-.student-card .sid {
-    font-size: 0.78rem;
-    color: #3b5998 !important;
-    letter-spacing: 0.04em;
-}
-.student-card .module {
-    font-size: 0.7rem;
-    color: #6b7280 !important;
-    margin-top: 4px;
 }
 
 /* ─── Metric Cards ─── */
 [data-testid="metric-container"] {
-    background: #ffffff;
-    border: 1px solid #dde3f0;
+    border: 1px solid rgba(128,128,128,0.2);
     border-radius: 16px;
     padding: 16px 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -107,14 +57,12 @@ h1, h2, h3, h4 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 [data-testid="metric-container"] [data-testid="stMetricLabel"] {
-    color: #4a5568 !important;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 600;
 }
 [data-testid="metric-container"] [data-testid="stMetricValue"] {
-    color: #0d0d1a !important;
     font-family: 'Merriweather', serif;
     font-size: 1.7rem;
     font-weight: 900;
@@ -125,22 +73,47 @@ h1, h2, h3, h4 {
     font-family: 'Merriweather', serif;
     font-size: 1.3rem;
     font-weight: 900;
-    color: #0d0d1a !important;
     border-left: 4px solid #3b5998;
     padding-left: 14px;
     margin: 28px 0 16px 0;
     letter-spacing: -0.01em;
 }
 
-/* ─── Executive Summary Cards ─── */
+/* ─── Student Card ─── */
+.student-card {
+    border: 1px solid rgba(128,128,128,0.25);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 12px 0 20px 0;
+    text-align: center;
+    background: rgba(128,128,255,0.05);
+}
+.student-card .name {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.student-card .sid {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+}
+.student-card .module {
+    font-size: 0.7rem;
+    margin-top: 4px;
+    opacity: 0.6;
+}
+
+/* ─── Executive / Info Cards ─── */
 .exec-card {
-    background: #ffffff;
-    border: 1px solid #dde3f0;
+    border: 1px solid rgba(128,128,128,0.2);
     border-radius: 18px;
     padding: 24px 26px;
     margin-bottom: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(128,128,255,0.03);
 }
 .exec-card:hover {
     border-color: #3b5998;
@@ -149,85 +122,73 @@ h1, h2, h3, h4 {
 .exec-card h4 {
     font-family: 'Merriweather', serif;
     font-size: 1rem;
-    color: #1e3a5f !important;
     margin-bottom: 10px;
 }
 .exec-card p {
     font-size: 0.92rem;
     line-height: 1.7;
-    color: #2d3748 !important;
 }
 .exec-card .highlight {
-    color: #1e3a8a !important;
+    color: #3b82f6 !important;
     font-weight: 600;
 }
 
 /* ─── Insight Pills ─── */
 .insight-pill {
     display: inline-block;
-    background: #eef2ff;
-    border: 1px solid #c7d2fe;
-    color: #1e3a8a !important;
+    border: 1px solid rgba(99,102,241,0.4);
+    color: #818cf8 !important;
     border-radius: 999px;
     padding: 5px 14px;
     font-size: 0.82rem;
     margin: 4px 3px;
+    background: rgba(99,102,241,0.1);
 }
 .insight-pill-warn {
-    background: #fff1f2;
-    border-color: #fecdd3;
-    color: #9f1239 !important;
+    border-color: rgba(239,68,68,0.4);
+    color: #f87171 !important;
+    background: rgba(239,68,68,0.08);
 }
 .insight-pill-ok {
-    background: #f0fdf4;
-    border-color: #bbf7d0;
-    color: #166534 !important;
+    border-color: rgba(34,197,94,0.4);
+    color: #4ade80 !important;
+    background: rgba(34,197,94,0.08);
 }
 
 /* ─── Divider ─── */
 .fancy-divider {
     border: none;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #c7d2fe, transparent);
+    background: linear-gradient(90deg, transparent, rgba(128,128,200,0.3), transparent);
     margin: 28px 0;
 }
 
-/* ─── Page title ─── */
+/* ─── Page Title ─── */
 .dash-title {
     font-family: 'Merriweather', serif;
     font-size: 2.2rem;
     font-weight: 900;
-    color: #0d0d1a !important;
     letter-spacing: -0.02em;
     line-height: 1.1;
 }
 .dash-subtitle {
-    color: #4a5568 !important;
     font-size: 0.9rem;
     margin-top: 4px;
     letter-spacing: 0.02em;
+    opacity: 0.6;
 }
 
 /* ─── Dataframe ─── */
 [data-testid="stDataFrame"] {
     border-radius: 12px;
-    border: 1px solid #dde3f0;
+    border: 1px solid rgba(128,128,128,0.2);
     overflow: hidden;
 }
 
 /* ─── Selectbox & multiselect ─── */
 [data-testid="stSelectbox"] > div,
 [data-testid="stMultiSelect"] > div {
-    background: #ffffff !important;
-    border-color: #c7d2fe !important;
     border-radius: 10px !important;
-    color: #1a1a2e !important;
-}
-
-/* ─── Radio buttons in sidebar ─── */
-[data-testid="stSidebar"] .stRadio label {
-    color: #1a1a2e !important;
-    font-size: 0.88rem !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -235,9 +196,9 @@ h1, h2, h3, h4 {
 # ── Plotly light theme ──────────────────────────────────────────────────────
 def apply_theme(fig, h=420):
     fig.update_layout(
-        paper_bgcolor="rgba(255,255,255,0)",
-        plot_bgcolor="rgba(245,246,250,0.8)",
-        font=dict(family="Inter, sans-serif", color="#1a1a2e"),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Inter, sans-serif"),
         height=h,
         margin=dict(l=8, r=8, t=44, b=8),
         legend=dict(font=dict(size=10, color="#1a1a2e"), bgcolor="rgba(255,255,255,0.8)"),
@@ -534,9 +495,8 @@ elif page == "🗺️ Geographic Impact":
             paper_bgcolor="rgba(255,255,255,0)", plot_bgcolor="rgba(255,255,255,0)",
             font=dict(color="#1a1a2e"), height=420,
             geo=dict(showframe=False, showcoastlines=True,
-                     bgcolor="rgba(255,255,255,0)", landcolor="rgba(220,230,245,0.8)",
-                     oceancolor="rgba(219,234,254,0.5)", showocean=True,
-                     coastlinecolor="rgba(59,89,152,0.4)"),
+                     bgcolor="rgba(0,0,0,0)",
+                     coastlinecolor="rgba(128,128,200,0.5)"),
             margin=dict(l=0, r=0, t=44, b=0),
             title_font=dict(family="Merriweather, serif", size=15, color="#0d0d1a"),
             coloraxis_colorbar=dict(tickfont=dict(color="#2d3748"), title=dict(font=dict(color="#2d3748")))
