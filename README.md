@@ -6,16 +6,6 @@ Developed as part of the **5DATA004C Data Science Project Lifecycle** module at 
 
 ---
 
-## 👤 Student Information
-
-|---|---|
-| Name | Yogaraja Bawadharani |
-| UoW ID | w2149494 |
-| IIT ID | 20233004 |
-| Module | 5DATA004C · University of Westminster |
-
----
-
 ## 📊 About the Dashboard
 
 This dashboard provides an in-depth analysis of global natural disaster data sourced from the **EM-DAT International Disaster Database** (CRED), accessed via the **Humanitarian Data Exchange (HDX)**.
