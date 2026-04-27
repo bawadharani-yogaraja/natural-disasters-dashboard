@@ -8,8 +8,6 @@ Developed as part of the **5DATA004C Data Science Project Lifecycle** module at 
 
 ## 👤 Student Information
 
-| Field | Detail |
-|---|---|
 | Name | Yogaraja Bawadharani |
 | UoW ID | w2149494 |
 | IIT ID | 20233004 |
@@ -23,7 +21,7 @@ This dashboard provides an in-depth analysis of global natural disaster data sou
 
 It was designed for high-level decision-makers, finance professionals, and technology experts attending a global sustainability conference — providing actionable insights into the frequency, scale, and economic toll of natural disasters worldwide.
 
-### Research Questions Answered
+### Research Questions
 
 | RQ | Question |
 |---|---|
@@ -61,12 +59,12 @@ It was designed for high-level decision-makers, finance professionals, and techn
 
 ```
 natural-disasters-dashboard/
-│
-├── app.py                        # Main Streamlit application
-├── emdat_cleaned.csv             # Cleaned EM-DAT dataset
-├── requirements.txt              # Python dependencies
-├── .gitignore                    # Git ignore rules
-└── README.md                     # This file
+
+app.py                        # Main Streamlit application
+emdat_cleaned.csv             # Cleaned EM-DAT dataset
+requirements.txt              # Python dependencies
+.gitignore                    # Git ignore rules
+README.md                     # This file
 ```
 
 ---
@@ -97,9 +95,8 @@ natural-disasters-dashboard/
 
 This dashboard is deployed on **Streamlit Community Cloud**.
 
-> 🔗 [View Live Dashboard](https://YOUR-USERNAME-natural-disasters-dashboard.streamlit.app)
+> 🔗 [View Live Dashboard](https://natural-disasters-dashboard-uhtzdmygxz23xepzelk4ex.streamlit.app/)
 
-*(Replace the link above with your actual deployed URL after deployment)*
 
 ---
 
