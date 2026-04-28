@@ -21,16 +21,6 @@ html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
 }
 
-/* ─── Sidebar always visible ─── */
-[data-testid="stSidebar"] {
-    transform: none !important;
-    visibility: visible !important;
-    display: block !important;
-    min-width: 260px !important;
-    max-width: 300px !important;
-    border-right: 2px solid rgba(128,128,128,0.2);
-    box-shadow: 2px 0 8px rgba(0,0,0,0.06);
-}
 [data-testid="collapsedControl"],
 button[kind="header"] {
     display: none !important;
